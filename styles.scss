@@ -1,0 +1,321 @@
+$primary-text-color: #48555B;
+$secondary-color: #00A4E5;
+@mixin button-theme {
+    padding: 0.7rem 1.5rem;
+    background: $secondary-color;
+    border: none;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        background: #058bc1;
+    }
+}
+@font-face {
+    font-family: BebasNeueBold;
+    src: url(./fonts/BebasNeue-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(./fonts/OpenSans-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: OpenSans;
+    font-size: 16px;
+}
+header {
+    background: url(./img/bg-header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+        color: #fff;
+        .logo {
+            padding-top: 2rem;
+        }
+        .header-text {
+            text-align: center;
+            h1 {
+                font-family: BebasNeueBold;
+                font-size: 4rem;
+                font-weight: 400;
+                line-height: 4.5rem;
+                letter-spacing: 5.7px;
+            }
+        }
+        .scroll-down {
+            padding-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3.7px;
+        }
+    }
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.about-us, .services, .work {
+    margin-top: 5rem;
+}
+nav {
+    border: 1px solid #e6e6e6;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo img {
+            width: 9rem;
+        }
+        .menu{
+            ul {
+                list-style-type: none;
+                padding: 1rem 0;
+                li {
+                    display: inline-block;
+                    margin-left: 1.5rem;
+                    color: $primary-text-color;
+                    cursor: pointer;
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.about-us {
+    color: $primary-text-color;
+    .our-story-head {
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 2.3px;
+        }
+        .line{
+            width: 50px;
+            margin: .5rem auto;
+            border: .5px solid $secondary-color;
+        }
+    }
+    .our-story {
+        display: flex;
+        margin: 3rem 0;
+        .our-story-text {
+            flex-basis: 50%;
+            padding-right: 4rem;
+            p:first-child {
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding-bottom: 2rem;
+                span {
+                    font-size: 1.5rem;
+                    color: $secondary-color;
+                }
+            }
+            p:last-child {
+                line-height: 1.5rem;
+            }
+        }
+        .img-container {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: space-between;
+            height: 225px;
+            .our-story-img-1 {
+                background: url(./img/about-us-1.jpg) no-repeat;
+            }
+            .our-story-img-2 {
+                background: url(./img/about-us-2.jpg) no-repeat;
+            }
+            .our-story-img-3 {
+                background: url(./img/about-us-3.jpg) no-repeat;
+            }
+            [class^="our-story-img-"] {
+                width: 24%;
+                background-position: top right;
+                text-decoration: none;
+                &:hover h1 {
+                    color: $secondary-color;
+                }
+            }
+            h1 {
+                padding: 1rem;
+                font-size: 1.5rem;
+                color: #fff;
+                letter-spacing: 3px;
+            }
+        }
+    }
+}
+.services {
+    display: flex;
+    justify-content: space-between;
+    .capabilities {
+        flex-basis: 33%;
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2.3px;
+        }
+        .line{
+            width: 50px;
+            margin: .5rem 0;
+            border: .5px solid $secondary-color;
+        }
+    }
+    .description {
+        flex-basis: 66%;
+        display: flex;
+        .button {
+            @include button-theme;
+            margin-left: 6rem;
+        }
+    }
+}
+.work {
+    display: flex;
+    justify-content: space-between;
+    .box {
+        flex-basis: 30%;
+        padding: 1.5rem;
+        border: 1px solid #e6e6e6;
+        h1 {
+            margin: 1rem 0;
+        }
+        p {
+            line-height: 1.5rem;
+        }
+    }
+}
+.get-in-touch {
+    width: 100%;
+    height: 500px;
+    background: url(./img/getintouch.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        width: 350px;
+        margin: 2rem auto;
+        font-size: 2rem;
+        text-align: center;
+        color: $primary-text-color;
+    }
+    .button {
+        @include button-theme;
+    }
+
+}
+.signup {
+    background: #171819;
+    padding: 2rem;
+    color: #fff;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        label {
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding-right: 2rem;
+        }
+        input {
+            padding: 0.64rem 0.5rem;
+            border: none;
+            vertical-align: middle;
+        }
+        button {
+            @include button-theme;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+}
+.contact {
+    background: #141A20;
+    .contact-us {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        .contact-info {
+            flex-basis: 30%;
+            h1 {
+                padding: 2rem 0;
+                font-weight: normal;
+            }
+            .img-container {
+                margin-bottom: 1rem;
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
+            .lists {
+                display: flex;
+                justify-content: space-between;
+                ul a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: #fff;
+                    &:hover {
+                        color: $secondary-color;
+                    }          
+                }
+            }
+            .contact-adress {
+                display: flex;
+                justify-content: space-between;
+                .adress {
+                    flex-basis: 45%;
+                }
+                .social {
+                    flex-basis: 25%;
+                    display: flex;
+                    justify-content: space-between;
+                    a {
+                        color: #fff;
+                        &:hover {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    background: #171819;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+@media screen and (max-width: 992px) {
+    .about-us .our-story {
+        flex-direction: column;
+        .img-container {
+            flex-basis: auto;
+            [class^="our-story-img-"] {
+                width: 20%;
+            }
+        }
+    }
+    .contact-us {
+        flex-direction: column;
+    }
+}
