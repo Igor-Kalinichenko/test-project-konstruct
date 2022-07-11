@@ -50,13 +50,13 @@ header {
                 font-size: 4rem;
                 font-weight: 400;
                 line-height: 4.5rem;
-                letter-spacing: 5.7px;
+                letter-spacing: 0.36rem;
             }
         }
         .scroll-down {
             padding-bottom: 3rem;
             text-transform: uppercase;
-            letter-spacing: 3.7px;
+            letter-spacing: 0.23rem;
         }
     }
 }
@@ -100,7 +100,7 @@ nav {
             text-align: center;
             text-transform: uppercase;
             font-size: 1.2rem;
-            letter-spacing: 2.3px;
+            letter-spacing: 0.14rem;
         }
         .line{
             width: 50px;
@@ -131,29 +131,20 @@ nav {
             flex-basis: 50%;
             display: flex;
             justify-content: space-between;
-            height: 225px;
-            .our-story-img-1 {
-                background: url(./img/about-us-1.jpg) no-repeat;
-            }
-            .our-story-img-2 {
-                background: url(./img/about-us-2.jpg) no-repeat;
-            }
-            .our-story-img-3 {
-                background: url(./img/about-us-3.jpg) no-repeat;
-            }
             [class^="our-story-img-"] {
-                width: 24%;
-                background-position: top right;
+                position: relative;
                 text-decoration: none;
+                h1 {
+                    position: absolute;
+                    top: 1rem;
+                    left: .5rem;
+                    font-size: 1.5rem;
+                    color: #fff;
+                    letter-spacing: 0.19rem;
+                }
                 &:hover h1 {
                     color: $secondary-color;
                 }
-            }
-            h1 {
-                padding: 1rem;
-                font-size: 1.5rem;
-                color: #fff;
-                letter-spacing: 3px;
             }
         }
     }
@@ -166,7 +157,7 @@ nav {
         h2 {
             font-size: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 2.3px;
+            letter-spacing: 0.14rem;
         }
         .line{
             width: 50px;
@@ -190,6 +181,13 @@ nav {
         flex-basis: 30%;
         padding: 1.5rem;
         border: 1px solid #e6e6e6;
+        cursor: pointer;
+        &:hover {
+            border-color: $secondary-color;
+        }
+        &:hover h1 {
+            color: $secondary-color;
+        }
         h1 {
             margin: 1rem 0;
         }
@@ -200,7 +198,7 @@ nav {
 }
 .get-in-touch {
     width: 100%;
-    height: 500px;
+    height: 31.25rem;
     background: url(./img/getintouch.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -209,8 +207,7 @@ nav {
     flex-direction: column;
     align-items: center;
     h2 {
-        width: 350px;
-        margin: 2rem auto;
+        margin: 2rem 0;
         font-size: 2rem;
         text-align: center;
         color: $primary-text-color;
